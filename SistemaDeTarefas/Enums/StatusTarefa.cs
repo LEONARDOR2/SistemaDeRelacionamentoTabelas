@@ -5,7 +5,7 @@ namespace SistemaDeTarefas.Enums
     public enum StatusTarefa
     {
 
-        [Description("A fazer")]
+        [Description("A iniciar")]
         AFazer =1,
         [Description(" Em andamento")]
         EmAndamento =2,

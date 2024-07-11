@@ -2,7 +2,7 @@
 
 namespace SistemaDeTarefas.Models
 {
-    public class TarefaModel
+    public class ActivityModel
     {
         public int Id { get; set; }
 
@@ -14,6 +14,6 @@ namespace SistemaDeTarefas.Models
 
         public int? UsuarioId { get; set; }
 
-        public virtual UsuarioModel? Usuario { get; set; }
+        public virtual UserModel? Usuario { get; set; }
     }
 }

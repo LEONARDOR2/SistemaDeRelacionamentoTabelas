@@ -20,18 +20,18 @@ namespace SistemaDeTarefas
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddEntityFrameworkMySql()
-            .AddDbContext<SistemaTarefasDBContext>(
-            options => options.UseMySql(builder.Configuration.GetConnectionString("DataBase"),
+            //builder.Services.AddEntityFrameworkMySql()
+            //.AddDbContext<SistemaTarefasDBContext>(
+            //options => options.UseMySql(builder.Configuration.GetConnectionString("DataBase"),
 
-            new MySqlServerVersion(new Version(8, 3, 0))
-            )
-            );
+            //new MySqlServerVersion(new Version(8, 3, 0))
+            //)
+            //);
 
-           
+            builder.Services.AddDbContext<SystemActivityDBContext>();
 
-            builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
-            builder.Services.AddScoped<ITarefaRepositorio, TarefaRepositorio>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<ActivityRepository, ActivityRepository>();
 
 
 

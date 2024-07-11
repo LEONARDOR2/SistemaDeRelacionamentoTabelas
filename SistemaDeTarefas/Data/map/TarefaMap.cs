@@ -4,9 +4,9 @@ using SistemaDeTarefas.Models;
 
 namespace SistemaDeTarefas.Data.map
 {
-    public class TarefaMap : IEntityTypeConfiguration<TarefaModel>
+    public class TarefaMap : IEntityTypeConfiguration<ActivityModel>
     {
-      public void Configure(EntityTypeBuilder<TarefaModel> builder)
+      public void Configure(EntityTypeBuilder<ActivityModel> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(255);

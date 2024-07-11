@@ -4,9 +4,9 @@ using SistemaDeTarefas.Models;
 
 namespace SistemaDeTarefas.Data.map
 {
-    public class UsuarioMap : IEntityTypeConfiguration<UsuarioModel>
+    public class UsuarioMap : IEntityTypeConfiguration<UserModel>
     {
-        public void Configure(EntityTypeBuilder<UsuarioModel> builder)
+        public void Configure(EntityTypeBuilder<UserModel> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(255);
